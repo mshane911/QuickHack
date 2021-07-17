@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from welcome import views as welcome_view
 from signup import views as signup_view
+from dashboard import views as dashboard_view
 
 urlpatterns = [
     path('', welcome_view.index, name='welcome'),
     path('signup/', signup_view.index, name='signup'),
+    path('dashboard/', dashboard_view.index, name='dashboard'),
     path('admin/', admin.site.urls),
 ]
